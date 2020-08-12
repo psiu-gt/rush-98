@@ -6,6 +6,10 @@ import Typed from "typed.js";
 import Discord from "./js/discord.jsx";
 import ReactDOM from "react-dom";
 import React from "react";
+import Konami from "konami";
+
+// You know I had to do it to em
+const easterEgg = new Konami("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
 
 /** Lines that are typed to create the terminal effect. */
 const options = {

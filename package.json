@@ -43,6 +43,7 @@
   },
   "dependencies": {
     "@themesberg/windows-95-ui-kit": "git+https://github.com/themesberg/windows-95-ui-kit.git",
+    "konami": "^1.6.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react95": "^2.0.0",
