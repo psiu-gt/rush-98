@@ -38,13 +38,7 @@ body::after {
 }
 
 #content {
-  transition: opacity 4000ms;
-  will-change: opacity;
-  opacity: 0;
-}
-
-#content.faded-out {
-  opacity: 1;
+  display: none;
 }
 
 .img-green {

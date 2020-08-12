@@ -1,5 +1,5 @@
 import "./images/rushlogo.png";
-import "./pdf/rushflyer.pdf";
+import "./images/rushflyer.png";
 import "./styles/index.scss";
 import "@themesberg/windows-95-ui-kit/js/w95";
 import Typed from "typed.js";
@@ -20,13 +20,44 @@ const options = {
   onComplete: () => typingEnded(),
 };
 
+/**
+ * The typing effect will only trigger on the first time
+ * the page is viewed.
+ */
+// Commented out this feature, not sure if useful. May delete in the future.
+// const introPlayed = !!localStorage.getItem("introPlayed");
+// if (!introPlayed) {
+
+// } else {
+//   $("#skip-intro").hide();
+//   $("#typing").hide();
+//   $("#content").show();
+//   appendReact();
+// }
+
+/** Click handler to skip the typing intro. */
+$("#skip-intro").click(() => {
+  hideIntroAndShowContent();
+});
+
 const typed = new Typed("#typing", options);
 
-/** Unhide the main content and append the React component. */
 function typingEnded() {
-  const content = document.querySelector("#content");
-  content.classList.add("faded-out");
+  setTimeout(() => hideIntroAndShowContent(), 500);
+}
 
+/** Unhide the main content. */
+function hideIntroAndShowContent() {
+  $("#skip-intro").fadeOut(1000);
+  $("#typing").fadeOut(1000, () => {
+    $("#content").fadeIn(1000);
+  });
+  appendReact();
+}
+
+/** Append the React component. */
+function appendReact() {
   const domContainer = document.querySelector("#discord");
   ReactDOM.render(React.createElement(Discord), domContainer);
+  localStorage.setItem("introPlayed", true);
 }
