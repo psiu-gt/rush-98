@@ -1,0 +1,74 @@
+@import "~@themesberg/windows-95-ui-kit/css/w95.css";
+
+body {
+  background-color: black;
+  background-image: radial-gradient(rgba(0, 15, 0, 0.75), black 120%);
+  height: 100vh;
+  padding: 24px;
+  overflow-x: hidden;
+}
+
+/** Scanline effect */
+body::after {
+  content: "";
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(black, 0.15),
+    rgba(black, 0.15) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+}
+
+#typing {
+  display: inline;
+  color: #00ff00;
+  font: 1.3rem "Courier New", monospace;
+  text-shadow: 0 0 5px #c8c8c8;
+}
+
+#discord {
+  padding-top: 36px;
+}
+
+#content {
+  transition: opacity 4000ms;
+  will-change: opacity;
+  opacity: 0;
+}
+
+#content.faded-out {
+  opacity: 1;
+}
+
+.img-green {
+  filter: invert(70%) sepia(81%) saturate(4451%) hue-rotate(81deg)
+    brightness(118%) contrast(122%);
+}
+
+.main-content {
+  /** Styles for mobile devices. */
+  @media (min-width: 1025px) {
+    max-width: 60vw !important;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  h5 {
+    font-weight: 500;
+  }
+}
+
+.window-title {
+  font-family: "Windows 95", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+}
