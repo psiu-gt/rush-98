@@ -2,7 +2,7 @@ import "./images/rushlogo.png";
 import "./images/rushflyer.png";
 import "./styles/index.scss";
 import "@themesberg/windows-95-ui-kit/js/w95";
-import Typed from "typed.js";
+// import Typed from "typed.js";
 import Discord from "./js/discord.jsx";
 import ReactDOM from "react-dom";
 import React from "react";
@@ -44,7 +44,7 @@ $("#skip-intro").click(() => {
   hideIntroAndShowContent();
 });
 
-const typed = new Typed("#typing", options);
+// const typed = new Typed("#typing", options);
 
 function typingEnded() {
   setTimeout(() => hideIntroAndShowContent(), 500);
