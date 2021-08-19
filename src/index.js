@@ -24,6 +24,8 @@ const options = {
   onComplete: () => typingEnded(),
 };
 
+$("#content").fadeIn(1000);
+
 /**
  * The typing effect will only trigger on the first time
  * the page is viewed.
@@ -60,8 +62,8 @@ function hideIntroAndShowContent() {
 }
 
 /** Append the React component. */
-function appendReact() {
-  const domContainer = document.querySelector("#discord");
-  ReactDOM.render(React.createElement(Discord), domContainer);
-  localStorage.setItem("introPlayed", true);
-}
+// function appendReact() {
+//   const domContainer = document.querySelector("#discord");
+//   ReactDOM.render(React.createElement(Discord), domContainer);
+//   localStorage.setItem("introPlayed", true);
+// }
