@@ -1,7 +1,7 @@
 import "./images/rushlogo.png";
 import "./images/rushflyer.png";
 import "./images/schedule.png";
-import "./images/rushspring22.png";
+import "./images/rushschedule.png";
 import "./styles/index.scss";
 import "@themesberg/windows-95-ui-kit/js/w95";
 // import Typed from "typed.js";
